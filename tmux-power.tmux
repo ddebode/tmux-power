@@ -129,6 +129,12 @@ fi
 if [[ $prefix_highlight_pos == 'R' || $prefix_highlight_pos == 'LR' ]]; then
     RS="#{prefix_highlight}$RS"
 fi
+
+# CPU
+RS="#{cpu_fg_color}  CPU: #{cpu_icon} #{cpu_percentage} $RS"
+# Ram
+RS="ram: #{ram_icon} #{ram_percentage} $RS"
+
 tmux_set status-right "$RS"
 
 # Window status
@@ -139,7 +145,7 @@ tmux_set window-status-current-format "#[fg=$BG,bg=$G06]$right_arrow_icon#[fg=$T
 tmux_set window-status-separator ""
 
 # Window status alignment
-tmux_set status-justify centre
+tmux_set status-justify left
 
 # Current window status
 tmux_set window-status-current-statys "fg=$TC,bg=$BG"
