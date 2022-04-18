@@ -113,6 +113,9 @@ fi
 if [[ $prefix_highlight_pos == 'L' || $prefix_highlight_pos == 'LR' ]]; then
     LS="$LS#{prefix_highlight}"
 fi
+
+# prefix highlight plugin
+LS="$LS#{prefix_highlight}"
 tmux_set status-left "$LS"
 
 # Right side of status bar
