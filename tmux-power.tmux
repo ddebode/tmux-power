@@ -136,7 +136,7 @@ fi
 # CPU
 RS="#{cpu_fg_color}  CPU: #{cpu_icon} #{cpu_percentage} $RS"
 # Ram
-RS=" #{ram_amount} $RS"
+RS=" #{ram_amount} $RS"
 
 tmux_set status-right "$RS"
 
